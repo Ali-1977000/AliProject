@@ -1,3 +1,4 @@
+@login
 Feature:  User should be able to login to Vytrack App
 
   Scenario: Driver should be able to login
