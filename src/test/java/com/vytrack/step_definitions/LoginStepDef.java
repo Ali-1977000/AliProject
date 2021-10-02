@@ -34,6 +34,48 @@ public class LoginStepDef {
         String actualTitle = Driver.get().getTitle();
         Assert.assertEquals("Dashboard",actualTitle);
 
+
+        }
+
+    @When("the user enters the {string} and {string}")
+    public void the_user_enters_the_and(String username, String password) {
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.login(username , password);
     }
 
+    @When("the user logged in as {string}")
+    public void theUserLoggedInAs(String userType) {
+        String username ="", password="" ;
+
+        switch (userType){
+            case "storeManager" :
+                username = ConfigurationReader.get("sales_manager_username");
+                password = ConfigurationReader.get("sales_manager_password");
+                break ;
+            case "driver" :
+                username = ConfigurationReader.get("driver_username");
+                password = ConfigurationReader.get("driver_password");
+                break;
+            case "salesManager" :
+                username = ConfigurationReader.get("store_manager_username");
+                password = ConfigurationReader.get("store_manager_password");
+                break;
+
+            default:
+                System.out.println("UNKNOWN USER TYPE!!!");
+        }
+
+        LoginPage loginPage = new LoginPage() ;
+        loginPage.login(username, password);
+
+    }
+
+
+
+
+
+
 }
+
+
