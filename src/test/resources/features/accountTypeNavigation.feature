@@ -8,8 +8,8 @@ Feature: Each account type should see different menu items when logging in
     Then  the title should be "<title>"
 
     Examples:
-      | userType      | tab        | module          | title                                                              |
-      | driver        | Fleet      | Vehicles Model  | Vehicles Model - Entities - System - Car - Entities - System       |
+      | userType     | tab        | module          | title                                                              |
+      | driver       | Fleet      | Vehicles Model  | Vehicles Model - Entities - System - Car - Entities - System       |
       | driver       | Customers  | Accounts        | Accounts - Customers                                               |
       | driver       | Customers  | Contacts        | Contacts - Customers                                               |
       | driver       | Activities | Calendar Events | Calendar Events - Activities                                       |
