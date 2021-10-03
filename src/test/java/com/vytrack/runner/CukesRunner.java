@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
                 "html:target/default-html-reports",
                 "rerun:target/rerun.txt"
         } ,
-        tags = "@wip"  //@calculator"   // "@login"  // which feature you want to run
+        tags = "@wip3"  //@calculator"   // "@login"  // which feature you want to run
 )
 public class CukesRunner {
 
