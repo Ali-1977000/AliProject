@@ -12,6 +12,8 @@ Feature: Calculator app should be able to calculation
     When I add 10 to 8
     Then I should get 18
 
+
+    #Calculator data driven test DDT with scenario outline
     Scenario Outline: Adding two numbers <num1> with <num2> and expect <expectedResult>
 
       Given I have calculator app open
